@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="memberForm" novalidate>
+
+            <h1>Club Registration</h1>
+
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label>
+            <input
+                type="text"
+                id="fullName"
+                maxlength="100"
+                autocomplete="name"
+                required
+            >
+
+            <!-- Student Number -->
+            <label for="studentNumber">Student Number</label>
+            <input
+                type="text"
+                id="studentNumber"
+                maxlength="8"
+                pattern="[0-9]{8}"
+                inputmode="numeric"
+                autocomplete="off"
+                title="Please enter your 8-digit student number"
+                required
+            >
+
+            <!-- Email -->
+            <label for="email">Student Email</label>
+            <input
+                type="email"
+                id="email"
+                maxlength="100"
+                autocomplete="email"
+                placeholder="12345678@student.murdoch.edu.au"
+                required
+            >
+
+            <!-- Degree Name -->
+            <label for="degreeName">Degree Name</label>
+            <input
+                type="text"
+                id="degreeName"
+                maxlength="100"
+                required
+            >
+
+            <!-- Degree Major -->
+            <label for="degreeMajor">Degree Major</label>
+            <input
+                type="text"
+                id="degreeMajor"
+                maxlength="100"
+                required
+            >
+
+            <!-- Discord Username -->
+            <label for="discordUsername">
+            Discord Username (Optional)
+            </label>
+
+            <input
+                type="text"
+               id="discordUsername"
+                maxlength="32"
+                placeholder="username (optional)"
+            >
+
+<p class="help-text">
+    Optional. We use Discord for event announcements and community chat.
+</p>
+
+            <!-- Privacy Consent -->
+            <label class="checkbox-container">
+                <input
+                    type="checkbox"
+                    id="consent"
+                    required
+                >
+                I consent to the club storing and managing my information for membership purposes.
+            </label>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
